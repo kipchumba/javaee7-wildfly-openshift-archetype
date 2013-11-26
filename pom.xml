@@ -8,12 +8,26 @@
     <name>javaee7-wildfly-openshift-archetype</name>
     <description>An archetype that creates a JavaEE7 web application for Wildfly AS8 hosted on Openshift platform</description>
     <packaging>maven-archetype</packaging>
+    <url>http://www.MSzturc.de</url>
+    
+    <organization>
+        <name>Matthäus Szturc</name>
+        <url>http://www.MSzturc.de</url>
+    </organization>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
     
     <build>
         <extensions>
