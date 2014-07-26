@@ -1,6 +1,5 @@
 javaee7-wildfly-openshift-archetype
 ====================
-Summary: An archetype that creates a JavaEE7 web application for Wildfly AS8 hosted on Openshift platform
 
 Introduction
 ---------------------
