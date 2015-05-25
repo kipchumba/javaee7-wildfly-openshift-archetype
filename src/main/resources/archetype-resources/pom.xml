@@ -9,8 +9,7 @@
     
     <properties>
 
-        <version.wildfly.as>8.0.0.Beta1</version.wildfly.as>
-        <version.jboss.spec.javaee7>1.0.0.Beta2</version.jboss.spec.javaee7>
+        <version.wildfly.as>8.2.0.Final</version.wildfly.as>
         <version.cargo-maven2-plugin>1.4.5</version.cargo-maven2-plugin>
         
         <!-- openshift -->
@@ -23,10 +22,22 @@
         
         <!-- maven-compiler-plugin -->
         <!-- compile with JDK7 -->
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         
     </properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.wildfly.bom</groupId>
+				<artifactId>jboss-javaee-7.0-with-tools</artifactId>
+				<version>${version.wildfly.as}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
     
     <build>
         <finalName>${artifactId}</finalName>
@@ -119,14 +130,4 @@
             </build>
         </profile>
     </profiles>
-    
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.spec</groupId>
-            <artifactId>jboss-javaee-7.0</artifactId>
-            <version>${version.jboss.spec.javaee7}</version>
-            <type>pom</type>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>
